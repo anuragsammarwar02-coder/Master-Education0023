@@ -72,7 +72,7 @@ body {
     margin-right: 10px;
 }
 
-/* BUTTON EFFECT */
+/* PREMIUM BUTTON */
 .join-btn {
     position: relative;
     display: inline-block;
@@ -89,7 +89,6 @@ body {
     animation: glow 1.5s infinite alternate;
 }
 
-/* Glow Animation */
 @keyframes glow {
     from {
         box-shadow: 0 0 10px rgba(13,110,253,0.5);
@@ -99,7 +98,6 @@ body {
     }
 }
 
-/* Bubble Effect */
 .join-btn::before {
     content: "";
     position: absolute;
@@ -109,29 +107,16 @@ body {
     height: 100%;
     background: rgba(255,255,255,0.4);
     transform: skewX(-20deg);
-    animation: bubble 2s infinite;
+    animation: shine 2s infinite;
 }
 
-@keyframes bubble {
+@keyframes shine {
     0% {
         left: -75%;
     }
     100% {
         left: 125%;
     }
-}
-
-/* TIMER STYLE */
-.timer-box {
-    margin-top: 35px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff0000;
-    background: #ffffff;
-    display: inline-block;
-    padding: 14px 28px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
 }
 
 .footer {
@@ -188,11 +173,6 @@ Smart Trading | Big Mindset | Consistent Growth
 Join Telegram Channel
 </a>
 
-<!-- TIMER LOWERED -->
-<div class="timer-box" id="countdown">
-05:00
-</div>
-
 <div class="footer">
 Forex trading involves risk. Please trade responsibly and manage your risk properly.
 </div>
@@ -202,34 +182,6 @@ Maintained By <a href="https://wa.link/y2913g" target="_blank">Metamind Digital 
 </div>
 
 </div>
-
-<script>
-
-// 5 Minute Countdown
-let timeLeft = 300;
-
-const countdownElement = document.getElementById("countdown");
-
-const timer = setInterval(() => {
-
-    let minutes = Math.floor(timeLeft / 60);
-    let seconds = timeLeft % 60;
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    countdownElement.innerHTML = minutes + ":" + seconds;
-
-    if (timeLeft <= 0) {
-        clearInterval(timer);
-        window.location.href = "https://t.me/+Ox_LIic4j381ZTc1";
-    }
-
-    timeLeft--;
-
-}, 1000);
-
-</script>
 
 </body>
 </html>
