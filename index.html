@@ -14,6 +14,13 @@ body {
     background: #f7fbff;
 }
 
+.top-bar {
+    background: #d9f1ff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
 .container {
     text-align: center;
     padding: 40px 20px;
@@ -41,22 +48,57 @@ body {
     font-weight: bold;
 }
 
-.timer-box {
-    margin-top: 25px;
-    font-size: 32px;
+.stats {
+    margin: 20px 0;
+    font-size: 16px;
     font-weight: bold;
-    color: #ff0000;
-    background: #fff;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.info {
-    margin-top: 15px;
+.features {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.features li {
+    list-style: none;
+    margin: 10px 0;
     font-size: 16px;
-    color: #333;
+}
+
+.features li::before {
+    content: "✔";
+    color: #00c853;
+    margin-right: 10px;
+}
+
+.join-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.join-btn:hover {
+    background: #084298;
+}
+
+/* TIMER STYLE */
+.timer-box {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff0000;
+    background: #ffffff;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .footer {
@@ -81,28 +123,45 @@ body {
 
 <body>
 
+<div class="top-bar">
+Don't have Telegram yet? <a href="https://telegram.org" target="_blank">Try it now</a>
+</div>
+
 <div class="container">
 
 <img src="https://forexmind.online/wp-content/uploads/2025/12/master-mind-logo.jpg" class="logo">
 
 <div class="title">
-Master Mind Forex Community 🚀
+Master Mind Forex Community ✅
 </div>
 
 <div class="subtitle">
 Smart Trading | Big Mindset | Consistent Growth
 </div>
 
+<div class="stats">
+10,000+ Active Traders
+</div>
+
+<ul class="features">
+<li>Daily Forex Trading Signals</li>
+<li>Scalping & Swing Trade Setups</li>
+<li>High Accuracy Entry & Exit Levels</li>
+<li>Proper Risk Management Guidance</li>
+<li>Market News & Analysis Updates</li>
+</ul>
+
+<a href="https://t.me/+Ox_LIic4j381ZTc1" class="join-btn">
+Join Telegram Channel
+</a>
+
+<!-- TIMER BELOW BUTTON -->
 <div class="timer-box" id="countdown">
 05:00
 </div>
 
-<div class="info">
-You will be redirected to our Telegram Channel automatically.
-</div>
-
 <div class="footer">
-Forex trading involves risk. Trade with proper risk management.
+Forex trading involves risk. Please trade responsibly and manage your risk properly.
 </div>
 
 <div class="agency">
@@ -113,7 +172,7 @@ Maintained By <a href="https://wa.link/y2913g" target="_blank">Metamind Digital 
 
 <script>
 
-// 5 Minute Countdown (300 Seconds)
+// 5 Minute Countdown
 let timeLeft = 300;
 
 const countdownElement = document.getElementById("countdown");
