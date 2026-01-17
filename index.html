@@ -1,277 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="FOREX MASTER MIND - Education Channel | Free notes, live classes & trading strategies on Telegram" />
-  <title>FOREX MASTER MIND - Education Channel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Background bubbles */
-    .bubbles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-    .bubbles span{position:absolute;display:block;border-radius:9999px;opacity:0.12;background:linear-gradient(135deg,#60a5fa,#34d399);animation:float 12s linear infinite}
-    .bubbles span:nth-child(1){width:180px;height:180px;left:5%;top:10%;animation-duration:18s}
-    .bubbles span:nth-child(2){width:120px;height:120px;left:80%;top:5%;animation-duration:14s}
-    .bubbles span:nth-child(3){width:90px;height:90px;left:50%;top:60%;animation-duration:10s}
-    .bubbles span:nth-child(4){width:220px;height:220px;left:20%;top:75%;animation-duration:22s}
-    .bubbles span:nth-child(5){width:60px;height:60px;left:85%;top:40%;animation-duration:8s}
-    @keyframes float{0%{transform:translateY(0) translateX(0) scale(1);opacity:0.12}50%{transform:translateY(-30px) translateX(15px) scale(1.05);opacity:0.14}100%{transform:translateY(0) translateX(0) scale(1);opacity:0.12}}
+<meta charset="UTF-8">
+<title>Master Mind | Forex Trading Community</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Buttons */
-    .btn-cta{position:relative;overflow:hidden;border:none;display:inline-flex;align-items:center;justify-content:center}
-    .btn-cta .inner{position:relative;z-index:2}
-    .btn-cta:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#06b6d4,#3b82f6,#8b5cf6);filter:blur(12px);opacity:0.18;transition:opacity .3s,transform .45s;transform:scale(1)}
-    .btn-cta:hover:before{opacity:0.28;transform:scale(1.03)}
-    .btn-cta:hover{transform:translateY(-4px)}
-    .btn-cta:active{transform:translateY(0)}
-    .btn-cta.focus-ring{box-shadow:0 6px 18px rgba(59,130,246,0.18)}
+<style>
 
-    /* solid pill */
-    .pill{background:linear-gradient(90deg,#10b981,#3b82f6);color:white;padding:.72rem 1.1rem;border-radius:9999px;font-weight:600;box-shadow:0 10px 25px rgba(59,130,246,0.12);transition:transform .18s ease,box-shadow .18s ease}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f7fbff;
+}
 
-    /* layout tweaks */
-    .hero-bg{position:relative;overflow:hidden;background:linear-gradient(135deg,#f8fbff 0%,#eef7ff 50%,#ffffff 100%);} 
-    .glass{backdrop-filter: blur(6px); background: rgba(255,255,255,0.66);}    
-  </style>
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0d6efd;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-top: 15px;
+}
+
+.subtitle {
+    color: #00c853;
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.timer-box {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0000;
+    background: #fff;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #555;
+}
+
+.agency {
+    margin-top: 10px;
+}
+
+.agency a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+</style>
+
 </head>
-<!-- Meta Pixel Code -->
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4362063130708295');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4362063130708295&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<!-- End Meta Pixel Code -->
-<body class="antialiased text-gray-800 bg-gray-50">
-  <!-- Header -->
-  <header class="sticky top-0 bg-white/60 backdrop-blur z-40 border-b">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <img src="https://forexmind.online/wp-content/uploads/2025/12/master-mind-logo.jpg" alt="FOREX MASTER MIND Logo" class="w-12 h-12 object-contain rounded" />
-        <div>
-          <h2 class="text-lg font-semibold">FOREX MASTER MIND</h2>
-          <p class="text-xs text-gray-500">Education Channel</p>
-        </div>
-      </a>
 
-      <nav class="hidden md:flex gap-6 items-center text-sm">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#curriculum" class="hover:text-blue-600">Curriculum</a>
-        <a href="#schedule" class="hover:text-blue-600">Schedule</a>
-        <a href="#faq" class="hover:text-blue-600">FAQ</a>
-        <a href="https://t.me/+Ox_LIic4j381ZTc1" class="pill hidden lg:inline-flex">Join on Telegram</a>
-      </nav>
+<body>
 
-      <div class="md:hidden">
-        <a href="https://t.me/+Ox_LIic4j381ZTc1" target="_blank" class="px-3 py-2 bg-blue-600 text-white rounded text-sm">Join</a>
-      </div>
-    </div>
-  </header>
+<div class="container">
 
-  <!-- Hero -->
-  <section class="hero-bg py-20">
-    <div class="bubbles" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+<img src="https://forexmind.online/wp-content/uploads/2025/12/master-mind-logo.jpg" class="logo">
 
-    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 relative z-10">
-      <div class="text-center lg:text-left">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Master Forex trading with structured lessons & live support</h1>
-        <p class="mt-4 text-gray-700 text-lg max-w-2xl mx-auto lg:mx-0">FOREX MASTER MIND is a free education channel on Telegram dedicated to helping beginners and intermediate traders build a solid foundation: price action, risk management, trading psychology, system development and live market sessions. Join a community that values process over hype.</p>
-
-        <div class="mt-6 flex justify-center lg:justify-start gap-4 flex-wrap">
-          <a id="hero-join" href="https://t.me/+Ox_LIic4j381ZTc1" target="_blank" rel="noopener" class="btn-cta pill inline-flex items-center gap-3">
-            <span class="inner">Join Forex MasterMind Channel — Free</span>
-          </a>
-
-          <a href="#curriculum" class="inline-flex items-center gap-2 px-4 py-3 border rounded-lg text-sm hover:bg-gray-100">View Curriculum</a>
-        </div>
-
-        <ul class="mt-6 space-y-2 text-sm text-gray-700 max-w-xl mx-auto lg:mx-0">
-          <li>✅ Daily trade ideas & market analysis</li>
-          <li>✅ Step-by-step lessons (Beginner → Advanced)</li>
-          <li>✅ Live trade review sessions & Q&amp;A</li>
-          <li>✅ Risk management templates and checklists</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl shadow-2xl glass flex flex-col items-center">
-        <img src="https://forexmind.online/wp-content/uploads/2025/12/master-mind-logo.jpg" alt="Preview" class="rounded-lg shadow-md w-48 h-48 object-cover" />
-        <h3 class="mt-4 text-xl font-semibold">Instant Join</h3>
-        <p class="text-gray-600 mt-2 text-center">Click the button below to open Telegram and join the Education Channel instantly.</p>
-        <a href="https://t.me/+Ox_LIic4j381ZTc1" target="_blank" rel="noopener" class="mt-4 w-full inline-flex justify-center items-center gap-2 px-4 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg text-sm font-semibold btn-cta">Open Telegram Channel</a>
-
-        <div class="mt-6 w-full text-sm text-gray-500 text-left">
-          <strong>How to join:</strong>
-          <ol class="list-decimal list-inside mt-2">
-            <li>Tap "Open Telegram Channel"</li>
-            <li>If Telegram app opens, tap "Join" inside the app</li>
-            <li>Can't open? Use Telegram web or copy the invite link.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-<section id="about" class="max-w-6xl mx-auto py-12 px-6 text-center">
-<div class="max-w-3xl mx-auto">
-<h3 class="text-3xl font-bold">ABOUT FOREX MASTER MIND</h3>
-<p class="mt-4 text-gray-700 text-lg">Forex MasterMind   is built by traders for traders. We believe in practical, actionable education — not hype. Our content focuses on reproducible setups, money management, and building a trading process that fits your personality and time availability.</p>
-
-
-<ul class="mt-6 space-y-2 text-gray-700 text-left max-w-xl mx-auto">
-<li>• Real-market examples with annotated charts</li>
-<li>• Backtesting guides and simple performance trackers</li>
-<li>• Community-driven trade review and improvement</li>
-</ul>
+<div class="title">
+Master Mind Forex Community 🚀
 </div>
 
+<div class="subtitle">
+Smart Trading | Big Mindset | Consistent Growth
+</div>
 
-      <div class="bg-white p-6 rounded-lg shadow text-sm">
-        <h4 class="font-semibold">Who this channel is for</h4>
-        <ul class="mt-3 list-disc list-inside text-gray-700">
-          <li>Absolute beginners who want a structured path</li>
-          <li>Traders who need better risk & money management</li>
-          <li>Students who want daily practical analysis</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="timer-box" id="countdown">
+05:00
+</div>
 
-  <!-- Curriculum -->
-  <section id="curriculum" class="bg-white py-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-2xl font-bold text-center">Curriculum & Modules</h3>
-      <p class="text-gray-600 text-center mt-2 max-w-2xl mx-auto">Clear, progressive modules — each with lessons, resources and practice tasks.</p>
+<div class="info">
+You will be redirected to our Telegram Channel automatically.
+</div>
 
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 border rounded-lg">
-          <h4 class="font-semibold">Module 1 — Foundations</h4>
-          <ul class="mt-3 text-sm text-gray-700 list-disc list-inside">
-            <li>Market basics, currency pairs, market hours</li>
-            <li>Order types, leverage explained, spreads</li>
-            <li>Setting up charts & basic indicators</li>
-          </ul>
-        </div>
+<div class="footer">
+Forex trading involves risk. Trade with proper risk management.
+</div>
 
-        <div class="p-6 border rounded-lg">
-          <h4 class="font-semibold">Module 2 — Price Action</h4>
-          <ul class="mt-3 text-sm text-gray-700 list-disc list-inside">
-            <li>Support and resistance, structure & breakouts</li>
-            <li>Candlestick patterns & context</li>
-            <li>High-probability entries and exits</li>
-          </ul>
-        </div>
+<div class="agency">
+Maintained By <a href="https://wa.link/y2913g" target="_blank">Metamind Digital Agency</a>
+</div>
 
-        <div class="p-6 border rounded-lg">
-          <h4 class="font-semibold">Module 3 — Risk & Systems</h4>
-          <ul class="mt-3 text-sm text-gray-700 list-disc list-inside">
-            <li>Risk per trade, expectancy, position sizing</li>
-            <li>Building and testing a simple strategy</li>
-            <li>Journal templates and review process</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- Live Schedule -->
-  <section id="schedule" class="max-w-6xl mx-auto py-12 px-6">
-    <h3 class="text-2xl font-bold text-center">Live Sessions & Schedule</h3>
-    <p class="text-gray-600 text-center mt-2">Weekly live market review, monthly deep-dive workshops and ad-hoc Q&amp;A.</p>
+<script>
 
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-6 bg-white rounded-lg shadow text-center">
-        <h4 class="font-semibold">Daily Market Brief</h4>
-        <p class="text-sm text-gray-700 mt-2">Short analysis posted each morning — trade ideas & levels.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow text-center">
-        <h4 class="font-semibold">Weekly Live Review</h4>
-        <p class="text-sm text-gray-700 mt-2">Review of executed trades and lessons learned.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow text-center">
-        <h4 class="font-semibold">Monthly Workshop</h4>
-        <p class="text-sm text-gray-700 mt-2">Deep dives: backtesting, psychology, strategy design.</p>
-      </div>
-    </div>
-  </section>
+// 5 Minute Countdown (300 Seconds)
+let timeLeft = 300;
 
-  <!-- Testimonials -->
-  <section class="bg-gray-50 py-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-2xl font-bold text-center">What members say</h3>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <blockquote class="p-6 bg-white rounded-lg shadow">
-          <p class="text-gray-700">"Clear explanations and real charts — helped me go from demo to consistent trades."</p>
-          <footer class="mt-3 text-sm text-gray-500">— Aman, Member</footer>
-        </blockquote>
-        <blockquote class="p-6 bg-white rounded-lg shadow">
-          <p class="text-gray-700">"The risk management module changed how I size positions — less stress, better results."</p>
-          <footer class="mt-3 text-sm text-gray-500">— Priya, Member</footer>
-        </blockquote>
-        <blockquote class="p-6 bg-white rounded-lg shadow">
-          <p class="text-gray-700">"Daily briefs are concise and actionable. Love the community feedback."</p>
-          <footer class="mt-3 text-sm text-gray-500">— Rahul, Member</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
+const countdownElement = document.getElementById("countdown");
 
-  <!-- FAQ -->
-  <section id="faq" class="max-w-6xl mx-auto py-12 px-6">
-    <h3 class="text-2xl font-bold text-center">Frequently Asked Questions</h3>
-    <div class="mt-6 space-y-4 max-w-4xl mx-auto">
-      <details class="p-4 border rounded">
-        <summary class="font-semibold">Is the channel really free?</summary>
-        <p class="mt-2 text-sm text-gray-700">Yes — all core educational content and live sessions are free. We may offer paid advanced workshops in future (optional).</p>
-      </details>
-      <details class="p-4 border rounded">
-        <summary class="font-semibold">Can I get trade alerts?</summary>
-        <p class="mt-2 text-sm text-gray-700">We share trade ideas and levels for learning. If you want 1:1 alerts, consider our premium services (coming soon).</p>
-      </details>
-      <details class="p-4 border rounded">
-        <summary class="font-semibold">What platforms do you use?</summary>
-        <p class="mt-2 text-sm text-gray-700">Telegram for community, occasional YouTube/live streams for workshops, and shared Google Sheets for trackers.</p>
-      </details>
-    </div>
-  </section>
+const timer = setInterval(() => {
 
-  <!-- Final CTA -->
-  <section class="py-12 bg-gradient-to-r from-blue-50 to-green-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold">Ready to improve your trading?</h3>
-      <p class="mt-3 text-gray-700">Join thousands of learners on Telegram — free education, live sessions and community support.</p>
-      <a href="https://t.me/+Ox_LIic4j381ZTc1" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg text-lg font-semibold btn-cta">Join Forex Focus Channel</a>
-    </div>
-  </section>
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
 
-  <!-- Footer (menu removed) -->
-  <footer class="bg-white py-8">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-3">
-        <img src="https://forexmind.online/wp-content/uploads/2025/12/master-mind-logo.jpg" alt="Logo" class="w-10 h-10 object-contain rounded" />
-        <div>
-          <strong>FOREX MASTER MIND</strong>
-          <div class="text-sm text-gray-500">Education Channel</div>
-        </div>
-      </div>
-      <div>
-        <a href="https://t.me/+Ox_LIic4j381ZTc1" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-lg">Join on Telegram</a>
-      </div>
-    </div>
-  </footer>
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    countdownElement.innerHTML = minutes + ":" + seconds;
+
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://t.me/+Ox_LIic4j381ZTc1";
+    }
+
+    timeLeft--;
+
+}, 1000);
+
+</script>
 
 </body>
 </html>
