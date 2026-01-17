@@ -55,14 +55,14 @@ body {
 }
 
 .features {
-    max-width: 400px;
+    max-width: 420px;
     margin: auto;
     text-align: left;
 }
 
 .features li {
     list-style: none;
-    margin: 10px 0;
+    margin: 12px 0;
     font-size: 16px;
 }
 
@@ -72,33 +72,66 @@ body {
     margin-right: 10px;
 }
 
+/* BUTTON EFFECT */
 .join-btn {
+    position: relative;
     display: inline-block;
-    margin-top: 25px;
-    padding: 14px 35px;
-    background: #0d6efd;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #0d6efd, #00c6ff);
     color: white;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 50px;
     font-size: 18px;
     font-weight: bold;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(13,110,253,0.6);
+    animation: glow 1.5s infinite alternate;
 }
 
-.join-btn:hover {
-    background: #084298;
+/* Glow Animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(13,110,253,0.5);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(13,110,253,1);
+    }
+}
+
+/* Bubble Effect */
+.join-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-20deg);
+    animation: bubble 2s infinite;
+}
+
+@keyframes bubble {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
 }
 
 /* TIMER STYLE */
 .timer-box {
-    margin-top: 20px;
+    margin-top: 35px;
     font-size: 28px;
     font-weight: bold;
     color: #ff0000;
     background: #ffffff;
     display: inline-block;
-    padding: 12px 25px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
 }
 
 .footer {
@@ -155,7 +188,7 @@ Smart Trading | Big Mindset | Consistent Growth
 Join Telegram Channel
 </a>
 
-<!-- TIMER BELOW BUTTON -->
+<!-- TIMER LOWERED -->
 <div class="timer-box" id="countdown">
 05:00
 </div>
